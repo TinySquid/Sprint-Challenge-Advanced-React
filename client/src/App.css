@@ -35,7 +35,7 @@ td {
 }
 
 .dark-mode__toggle {
-  background: papayawhip;
+  background: rgb(213, 250, 255);
   border-radius: 50px;
   border: 1px solid black;
   height: 20px;
@@ -43,10 +43,14 @@ td {
   width: 40px;
 }
 
+.dark-mode__toggled {
+  background: rgb(255, 249, 213);
+}
+
 .toggle {
-  background: #f68819;
+  background: #1971f6;
   border-radius: 50px;
-  height: 18px;
+  height: 20px;
   left: 0;
   position: absolute;
   transition: 0.2s;
@@ -54,5 +58,6 @@ td {
 }
 
 .toggled {
-  left: 18px;
+  background: #f69e19;
+  left: 20px;
 }

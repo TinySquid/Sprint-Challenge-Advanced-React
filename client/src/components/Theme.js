@@ -15,7 +15,7 @@ const Theme = () => {
       <span>
         Toggle Dark Mode
       </span>
-      <div className="dark-mode__toggle">
+      <div className={darkMode ? "dark-mode__toggle dark-mode__toggled" : "dark-mode__toggle"}>
         <div
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
