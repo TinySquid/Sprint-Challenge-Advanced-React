@@ -22,31 +22,53 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Why would you use class component over function components (removing hooks from the question)?
-- [ ] Name three lifecycle methods and their purposes.
-- [ ] What is the purpose of a custom hook?
-- [ ] Why is it important to test our apps?
+- [x] Why would you use class component over function components (removing hooks from the question)?
+
+Class components have state and lifecycle methods (componentDidMount, componentDidUpdate, componentWillUnmount) that functional components do not have. You would use a functinal component when you only want to render props or something simple (without state).
+
+- [x] Name three lifecycle methods and their purposes.
+
+Mounting - Updating - Unmounting
+componentDidMount - This method is triggered after the component has initialized it's constructor and is rendered to the DOM.
+
+componentDidUpdate - This method fires when the component's state changes either through setState or when forceUpdate() is called on it.
+
+componentWillUnmount - This method will fire when the component is removed from the DOM. It allows you to write cleanup code for whatever your component was doing before. (Like closing open sockets, etc)
+
+- [x] What is the purpose of a custom hook?
+
+Custom hooks are great because they can be written to cover many things like form handling, animation, timers, etc. They are a layer of abstraction that makes your code cleaner (only when it fits an actual use case!) and they are re-usable via importing into other components.
+
+- [x] Why is it important to test our apps?
+
+1. Testing makes our code more robust because we test for edge cases and general usage to find bugs. 
+
+2. It makes bugs show up quicker than if we were to break something and then have to manually reproduce the steps to find it. 
+
+3. It acts as documentation for how the code should work (literally because it tests for functionality).
+
+4. Testing shows that we know what are code is meant to do and it will always stay that way even after refactoring, because the functionality is what's being tested, not the implementation.
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
-- [ ] Run `yarn` to download dependencies.
-- [ ] Run the server using `yarn start` or `node server.js`.
-- [ ] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
-- [ ] Still inside the `client` folder run `yarn start` to run the client application.
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add TL as collaborator on Github.
+- [x] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [x] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [x] Run `yarn` to download dependencies.
+- [x] Run the server using `yarn start` or `node server.js`.
+- [x] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
+- [x] Still inside the `client` folder run `yarn start` to run the client application.
+- [x] Implement the project on this Branch, **committing progress & changes often.**
+- [x] Push commits: `git push origin <firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request.
-- [ ] PM then will count the HW as done by merging the branch back into master.
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [x] Add your Project Manager as a Reviewer on the Pull-request.
+- [x] PM then will count the HW as done by merging the branch back into master.
 
 ## Minimum Viable Product
 
