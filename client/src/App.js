@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Theme from './components/Theme';
 import Display from './components/Display';
 
 import './App.css';
@@ -19,6 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
+        <Theme />
         <Display data={this.state.dataSet} />
       </div>
     )
