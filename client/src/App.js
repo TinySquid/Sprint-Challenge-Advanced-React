@@ -4,12 +4,14 @@ import Display from './components/Display';
 import './App.css';
 
 class App extends React.Component {
-  state = {};
+  state = {
+    dataSet: []
+  };
 
   componentDidMount() {
     fetch('http://localhost:5000/api/players')
       .then(response => response.json())
-      .then(data => this.setState({ data }))
+      .then(data => this.setState({ dataSet: data }))
       .catch(error => console.log(error));
   }
 
@@ -17,7 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        {this.state ? console.log(this.state) : null}
+        <Display data={this.state.dataSet} />
       </div>
     )
   }
