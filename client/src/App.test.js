@@ -38,3 +38,15 @@ test('Theme switching works', () => {
   expect(toggle).toBeInTheDocument();
 });
 
+test('localStorage hook works', () => {
+  window.localStorage.removeItem('dark-mode');
+
+  const doc = rtl.render(<Theme />)
+  const toggle = doc.getByLabelText(/theme/i);
+
+  rtl.fireEvent.click(toggle);
+
+  const changedValue = JSON.parse(window.localStorage.getItem('dark-mode'));
+  expect(changedValue).toBe(true);
+
+});
