@@ -17,6 +17,7 @@ const Theme = () => {
       </span>
       <div className={darkMode ? "dark-mode__toggle dark-mode__toggled" : "dark-mode__toggle"}>
         <div
+          aria-label={"theme toggle switch"}
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
         />
