@@ -3,6 +3,7 @@ import * as rtl from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import App from './App';
+import PopularityChart from './components/PopularityChart';
 import Display from './components/Display';
 import Theme from './components/Theme';
 
@@ -49,4 +50,12 @@ test('localStorage hook works', () => {
   const changedValue = JSON.parse(window.localStorage.getItem('dark-mode'));
   expect(changedValue).toBe(true);
 
+});
+
+test('Popularity chart renders correctly', () => {
+  const mockData = [
+    { 'name': 'Yeet Yeeterson', 'Search Score': 45 },
+    { 'name': 'Jane Doe', 'Search Score': 32 }
+  ]
+  rtl.render(<PopularityChart data={mockData} />);
 });
