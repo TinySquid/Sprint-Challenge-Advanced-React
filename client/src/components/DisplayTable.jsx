@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const Display = ({ data }) => {
+const DisplayTable = ({ data }) => {
   return (
     <table>
       <thead>
@@ -11,22 +11,16 @@ const Display = ({ data }) => {
         </tr>
       </thead>
       <tbody>
-        {data.length !== 0 ? data.map((row, idx) => (
+        {data.length && data.map((row, idx) => (
           <tr key={idx}>
             <td>{row.name}</td>
             <td>{row.country}</td>
             <td>{row.searches}</td>
           </tr>
-        )) : null}
-        <tr>
-          <td>Lieke Martens</td>
-          <td>Netherlands</td>
-          <td>6</td>
-        </tr>
+        ))}
       </tbody>
     </table>
-
-  )
+  );
 }
 
-export default Display;
+export default DisplayTable;

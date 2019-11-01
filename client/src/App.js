@@ -2,7 +2,7 @@ import React from 'react';
 
 import Theme from './components/Theme';
 import PopularityChart from './components/PopularityChart';
-import Display from './components/Display';
+import DisplayTable from './components/DisplayTable';
 
 import './App.css';
 
@@ -27,10 +27,9 @@ class App extends React.Component {
       <div className="app">
         <Theme />
         <PopularityChart data={this.state.dataSet.slice(0, 10)} />
-        <Display data={this.state.dataSet} />
-
+        <DisplayTable data={this.state.dataSet} />
       </div>
-    )
+    );
   }
 }
 

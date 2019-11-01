@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 import App from './App';
 import PopularityChart from './components/PopularityChart';
-import Display from './components/Display';
+import DisplayTable from './components/DisplayTable';
 import Theme from './components/Theme';
 
 test('Renders without crashing', () => {
@@ -12,7 +12,7 @@ test('Renders without crashing', () => {
 });
 
 test('Display renders passed in data correctly', () => {
-  const doc = rtl.render(<Display data={[
+  const doc = rtl.render(<DisplayTable data={[
     { name: "Alex Morgan", country: "United States", searches: 100 },
     { name: "Wendie Renard", country: "France", searches: 7 }
   ]} />);
