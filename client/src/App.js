@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import Theme from './components/Theme';
+import PopularityChart from './components/PopularityChart';
+import DisplayTable from './components/DisplayTable';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    dataSet: []
+  };
+
+  //Get API data on mount
+  componentDidMount() {
+    fetch('http://localhost:5000/api/players')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ dataSet: data });
+      })
+      .catch(error => console.log(error));
+  }
+
+
+  render() {
+    return (
+      <div className="app">
+        <Theme />
+        <PopularityChart data={this.state.dataSet.slice(0, 10)} />
+        <DisplayTable data={this.state.dataSet} />
+      </div>
+    );
+  }
 }
 
 export default App;
